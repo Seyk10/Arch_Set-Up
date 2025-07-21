@@ -1,13 +1,16 @@
 #!/bin/bash
 
-# Update system
+#Update system
 sudo pacman -Syu --noconfirm
 
-# Install base
-sudo pacman -S --noconfirm base base-devel
+#Install base
+sudo pacman -S --noconfirm base-devel
 
-# Install essentials
-sudo pacman -S --noconfirm e2fsprogs dosfstools nano man-db man-pages texinfo networkmanager sudo grub efibootmgr timeshift jq curl wget make clang base-devel imagemagick
+#Install essentials
+sudo pacman -S --noconfirm e2fsprogs dosfstools man-db man-pages texinfo networkmanager timeshift jq curl wget make clang base-devel imagemagick
+
+#Enable network service
+sudo systemctl enable NetworkManager
 
 ##Configure daily backup service
 #Add to filter list boot as part of backups
