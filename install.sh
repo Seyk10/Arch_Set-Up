@@ -7,10 +7,7 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm base-devel
 
 #Install essentials
-sudo pacman -S --noconfirm e2fsprogs dosfstools man-db man-pages texinfo networkmanager timeshift jq curl wget make clang base-devel imagemagick
-
-#Enable network service
-sudo systemctl enable NetworkManager
+sudo pacman -S --noconfirm e2fsprogs dosfstools man-db man-pages texinfo timeshift jq curl wget make clang base-devel imagemagick
 
 ##Configure daily backup service
 #Add to filter list boot as part of backups
