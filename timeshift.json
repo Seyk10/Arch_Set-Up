@@ -1,0 +1,18 @@
+{
+  "snapshot_device": "/dev/sda2",
+  "snapshot_type": "RSYNC",
+  "tags": 
+  {
+    "daily": true,
+    "weekly": false,
+    "monthly": false,
+    "boot": false
+  },
+  "snapshot_count": 
+  {
+    "daily": 3,
+    "weekly": 0,
+    "monthly": 0,
+    "boot": 0
+  }
+}
