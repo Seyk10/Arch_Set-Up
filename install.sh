@@ -4,10 +4,12 @@
 sudo pacman -Syu --noconfirm
 
 #Install base
-sudo pacman -S --noconfirm base-devel
+sudo pacman -S --noconfirm --needed base-devel
 
 #Install essentials
-sudo pacman -S --noconfirm e2fsprogs dosfstools man-db man-pages texinfo timeshift jq curl wget make clang base-devel imagemagick
+sudo pacman -S --noconfirm --needed e2fsprogs dosfstools man-db man-pages texinfo timeshift jq curl wget make clang base-devel imagemagick
+
+sudo systemctl enable --now cronie.service
 
 ##Configure daily backup service
 #Add to filter list boot as part of backups
@@ -31,5 +33,5 @@ sudo systemctl enable timeshift-autobackup.service
 
 #Duplicate snapshots configuration
 if [ ! -e /etc/timeshift.json ]; then
-    sudo cp .timeshift.json /etc/timeshift.json
+    sudo cp ./timeshift.json /etc/timeshift.json
 fi
